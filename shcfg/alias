@@ -1,0 +1,14 @@
+alias g='git'
+# Some more ls aliases
+alias ll='ls -Al'
+alias la='ls -alF'
+alias l='ls -1F'
+alias tree='tree -Csu | less -R'
+
+# Directory navigation
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'

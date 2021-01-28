@@ -1,0 +1,1 @@
+[ -e "${HOME}/.shcfg/aliases" ] && source "${HOME}/.shcfg/aliases"

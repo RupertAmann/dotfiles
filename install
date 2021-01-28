@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#set -x
+
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+link_dotfile() {
+    file=$1
+    # if backup file is already there, overwirte existing file without backup
+    if [[ -f ~/.${file}~ ]]; then
+        echo "found backup for ${file} (.$file~), won't create a new backup"
+        ln -sf ${BASEDIR}/${file} ~/.${file}
+    # create backup if it is not there
+    else
+        echo "create backup file of ${file}"
+        ln -sb ${BASEDIR}/${file} ~/.${file} #--suffix="-backup"
+    fi
+}
+
+link_dotfile gitconfig
+link_dotfile zshrc
+link_dotfile shcfg
