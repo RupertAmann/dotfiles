@@ -6,14 +6,18 @@ BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 link_dotfile() {
     file=$1
-    # if backup file is already there, overwirte existing file without backup
+    
+    # if backup file is already there, overwrite existing file without backup
     if [[ -f ~/.${file}~ ]]; then
         echo "found backup for ${file} (.$file~), won't create a new backup"
         ln -sf ${BASEDIR}/${file} ~/.${file}
     # create backup if it is not there
-    else
+    elif [[ -f ~/.${file} ]]; then
         echo "create backup file of ${file}"
-        ln -sb ${BASEDIR}/${file} ~/.${file} #--suffix="-backup"
+        mv ~/.${file} ~/.${file}~
+    else
+        echo "linking .${file}"
+        ln -s ${BASEDIR}/${file} ~/.${file}
     fi
 }
 
