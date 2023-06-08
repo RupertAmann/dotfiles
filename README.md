@@ -2,7 +2,7 @@
 
 `cd` (go to home directory)
 
-`git clone git@github.com:RupertAmann/dotfiles.git`
+`git clone https://github.com/RupertAmann/dotfiles.git`
 
 `./dotfiles/install`
 
