@@ -27,6 +27,7 @@ brew_cask=(
     google-chrome
     google-drive
     qgis
+    microsoft-office
     spotify
     teamviewer
     visual-studio-code
