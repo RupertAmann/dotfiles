@@ -23,6 +23,7 @@ brew $action "${brew_apps[@]}"
 
 echo "Installing brew cask apps"
 brew_cask=(
+    1password
     google-chrome
     google-drive
     qgis
