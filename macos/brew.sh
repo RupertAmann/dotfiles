@@ -26,7 +26,7 @@ brew_cask=(
     1password
     google-chrome
     google-drive
-    qgis
+    #qgis
     microsoft-office
     spotify
     teamviewer
