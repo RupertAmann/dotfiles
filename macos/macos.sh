@@ -17,7 +17,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-name=rupert-mac2018
+name=rupert-mac2024
 sudo scutil --set ComputerName "$name"
 sudo scutil --set HostName "$name"
 sudo scutil --set LocalHostName "$name"
@@ -87,7 +87,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 10
 # Note: if you’re in the US, replace `EUR` with `USD`, `Centimeters` with
 # `Inches`, `en_GB` with `en_US`, and `true` with `false`.
 defaults write NSGlobalDomain AppleLanguages -array "en" "de"
-defaults write NSGlobalDomain AppleLocale -string "en_GB@currency=EUR"
+defaults write NSGlobalDomain AppleLocale -string "en_US@currency=EUR"
 defaults write NSGlobalDomain AppleMeasurementUnits -string "Centimeters"
 defaults write NSGlobalDomain AppleMetricUnits -bool true
 
@@ -146,7 +146,7 @@ defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
 defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # Show the ~/Library folder
-chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
+#chflags nohidden ~/Library && xattr -d com.apple.FinderInfo ~/Library
 
 # Show the /Volumes folder
 sudo chflags nohidden /Volumes
@@ -185,13 +185,13 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/Simulator (
 ###############################################################################
 
 # Privacy: don’t send search queries to Apple
-defaults write com.apple.Safari UniversalSearchEnabled -bool false
-defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+#defaults write com.apple.Safari UniversalSearchEnabled -bool false
+#defaults write com.apple.Safari SuppressSearchSuggestions -bool true
 
 # Enable Safari’s debug menu
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+#defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 # Enable “Do Not Track”
-defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
+#defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
 
 ###############################################################################
 # Address Book, Dashboard, iCal, TextEdit, and Disk Utility                   #

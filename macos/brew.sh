@@ -28,8 +28,14 @@ brew_cask=(
     google-drive
     #qgis
     microsoft-office
+    openvpn-connect
+    owncloud
+    rectangle
+    scroll-reverser
+    slack
     spotify
     teamviewer
+    thunderbird
     visual-studio-code
     vlc
 )
